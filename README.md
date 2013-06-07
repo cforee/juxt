@@ -8,4 +8,6 @@ $ python juxt.py pronoun adjective noun verb adverb preposition article adjectiv
 
 his bronze mandolin advises smoothly on that notorious umbrella
 
+Just a silly little project demonstrating the powerful elegance of Python.  Enjoy!
+
 -- Chris Foree
