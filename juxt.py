@@ -17,10 +17,12 @@ if len(args) < 1:
   sys.exit()
 
 # iterate through each command line argument, select a word at random from
-# each specified syntactic category, and append it to our "sentence"
+# each specified syntactic category, then append it to our "sentence"
 for arg in args:
-  if not arg[0:3] in allowed_syntactic_categories: continue
-  with open (arg[0:3], "r") as word_list: word_set.append(random.choice(word_list.read().splitlines()))
+  short_arg = arg[0:3]
+  word_file = './syntactic_categories/' + short_arg + '.txt'
+  if not short_arg in allowed_syntactic_categories: continue
+  with open (word_file, "r") as word_list: word_set.append(random.choice(word_list.read().splitlines()))
 
-# output the result
+# output the "sentence"
 print ' '.join(word_set)
