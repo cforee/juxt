@@ -8,7 +8,6 @@ import sys, random
 word_set = []
 allowed_syntactic_categories = ['adj','adv','art','nou','pre','pro','ver']
 
-# get syntactic category sequence from command line arguements
 args = sys.argv[1:]
 
 # show help if no commang line arguments were provided
@@ -24,5 +23,4 @@ for arg in args:
   if not short_arg in allowed_syntactic_categories: continue
   with open (word_file, "r") as word_list: word_set.append(random.choice(word_list.read().splitlines()))
 
-# output the "sentence"
 print ' '.join(word_set)
