@@ -13,7 +13,6 @@ args = sys.argv[1:]
 # show help if no commang line arguments were provided
 if len(args) < 1: 
   print 'USAGE: "python juxt.py ' + ' '.join(allowed_syntactic_categories) + '"'
-  sys.exit()
 
 # iterate through each command line argument, select a word at random from
 # each specified syntactic category, then append it to our "sentence"
@@ -23,4 +22,5 @@ for arg in args:
   if not short_arg in allowed_syntactic_categories: continue
   with open (word_file, "r") as word_list: word_set.append(random.choice(word_list.read().splitlines()))
 
+# output the "sentence"
 print ' '.join(word_set)
