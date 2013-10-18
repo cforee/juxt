@@ -1,4 +1,4 @@
-<h1>juxtaposer - juxt.py</h1>
+<h1>juxt.py</h1>
 
 A Python script that takes a sequence of English syntactic categories (parts of speech) and generates a juxtaposition of words resembling a sentence.
 
