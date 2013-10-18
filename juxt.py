@@ -19,7 +19,7 @@ if len(args) < 1:
 for arg in args:
   short_arg = arg[0:3]
   word_file = './syntactic_categories/' + short_arg + '.txt'
-  if not short_arg in allowed_syntactic_categories: continue
+  if short_arg not in allowed_syntactic_categories: continue
   with open (word_file, "r") as word_list: word_set.append(random.choice(word_list.read().splitlines()))
 
 # output the "sentence"
